@@ -223,4 +223,27 @@ export class UserService {
         }
     }
 
+    //========================= GetUserProfileService =========================//  
+    /**
+     * GetUserProfileService is a service method which is used to get user profile
+     * destructuring the id from the authUser (loggedIn user data)
+     * if user is not exists then throw an error
+     * if user is exists then return the response
+     */
+    async getUserProfileService (req: any, res: any): Promise<object> {
+        try {
+            const { _id } = req.authUser
+            const user = await this._dbMethod.findOneDocument(this._userModel, { _id })
+            if (!user) throw new BadRequestException('Your account is not found please try to signUp or login again')
+            return res.status(200).json({ message: 'Your account is found Successfully', user })
+        } catch (error) {
+            console.log(`error happend in get user profile service. Details:${error}`);
+            throw new InternalServerErrorException({
+                message: 'Uknown error happend in get user profile service',
+                error_message: error.message,
+                status: 500
+            })
+        }
+    }
+
 }

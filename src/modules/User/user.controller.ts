@@ -56,4 +56,14 @@ export class UserController {
     ) {
         return this._authService.deleteAccountService(req, res)
     }
+
+
+    @Get('profile')
+    @UseGuards(AuthGuard)
+    GetUserProfileHandler(
+        @Req() req: Request,
+        @Res() res: Response
+    ) {
+        return this._authService.getUserProfileService(req, res)
+    }
 }

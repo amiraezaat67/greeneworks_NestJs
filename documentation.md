@@ -71,3 +71,19 @@
   1- authorization must be string, sent into req.headers , must starts with ( greeneworks__ ) then the access token and it's required 
 
 
+
+
+  # get profile data  API
+*API URL* : http://localhost:3000/api/users/profile , GET method
+
+*API Goal*: get profile data of the loggedIn User
+
+*API Request*:
+  Headers:{
+    "authorization":"greeneworks__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXJhZXphYXR3b3JrQGdtYWlsLmNvbSIsIl9pZCI6IjY1NmEyNGQ0YjdlOWVmNDA2OTc1Yzg0NSIsInJvbGUiOiJVc2VyIiwiaWF0IjoxNzAxNDU2NDAyLCJleHAiOjE3MDE0NjAwMDJ9.J6_h_aWBcj8kr6ITnH3mRSffMVR4NhtCd_A5dx-fhtg"
+  }
+
+*Data validation*:
+  1- authorization must be string, sent into req.headers , must starts with ( greeneworks__ ) then the access token and it's required 
+
+
