@@ -131,6 +131,34 @@
 				"description": "**API Goal:** delete the account of the loggedIn User  \n**API Request:**   \n**Headers**:{    \"authorization\":\"greeneworks__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXJhZXphYXR3b3JrQGdtYWlsLmNvbSIsIl9pZCI6IjY1NmEyNGQ0YjdlOWVmNDA2OTc1Yzg0NSIsInJvbGUiOiJVc2VyIiwiaWF0IjoxNzAxNDU2NDAyLCJleHAiOjE3MDE0NjAwMDJ9.J6_h_aWBcj8kr6ITnH3mRSffMVR4NhtCd_A5dx-fhtg\"  \n  }  \n**Data validation:**   \n1- authorization must be string, sent into req.headers , must starts with ( greeneworks__ ) then the access token and it's required"
 			},
 			"response": []
+		},
+		{
+			"name": "get profile data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "greeneworks__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXJhZXphYXR3b3JrQGdtYWlsLmNvbSIsIl9pZCI6IjY1NmI1ZTFkMzY2N2NiY2YwNzA4OWIzYyIsImlhdCI6MTcwMTUzNzIxNX0.2bFnDBquofppH-_gqJhIS67RS4OWswoQh-QOfWHZHLI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/users/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				},
+				"description": "**API Goal:** get profile data of the loggedIn User  \n**API Request:**  \n**Headers**:{ \"authorization\":\"greeneworks__eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXJhZXphYXR3b3JrQGdtYWlsLmNvbSIsIl9pZCI6IjY1NmEyNGQ0YjdlOWVmNDA2OTc1Yzg0NSIsInJvbGUiOiJVc2VyIiwiaWF0IjoxNzAxNDU2NDAyLCJleHAiOjE3MDE0NjAwMDJ9.J6_h_aWBcj8kr6ITnH3mRSffMVR4NhtCd_A5dx-fhtg\"  \n}  \n**Data validation:**  \n1- **authorization** must be string, sent into req.headers , must starts with ( greeneworks__ ) then the access token and it's required  \nEndFragment"
+			},
+			"response": []
 		}
 	]
 }
